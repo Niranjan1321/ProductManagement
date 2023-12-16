@@ -1,5 +1,25 @@
-node {
-  stage("Clone the project") {
-    git branch: 'master', url: 'https://github.com/Niranjan1321/ProductManagement'
-  }
-  }
+pipeline{
+	agent any
+	
+	stages{
+	
+	stage('Build'){
+	steps{
+	echo 'Building..'
+	}
+	}
+	
+	stage('Test'){
+	steps{
+	echo 'Testing..'
+	}
+	}
+	
+	stage('Deploy'){
+	steps{
+	echo 'Deploying..'
+	}
+	}
+	
+	}
+}
